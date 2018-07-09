@@ -21,7 +21,7 @@ public abstract class Account{
         totalMoney = Calculator.withdrawMoney(withdraw, balance);
     }
 
-    public double balance(){
+    public double getBalance(){
         return balance;
     }
 

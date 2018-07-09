@@ -11,6 +11,13 @@ public class Person{
         this.id = id;
     }
 
+    @Override
+    public int hashCode(){
+        Integer code = id * name.hashCode();
+       
+        return code.intValue();
+    }
+
     public String getName(){return name;}
     public Integer getId(){return id;}
 }
