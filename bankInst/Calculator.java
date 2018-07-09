@@ -1,4 +1,4 @@
-package bankInst;
+package bankinst;
 
 public static class Calculator{
     Calculator(){ }

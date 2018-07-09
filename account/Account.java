@@ -2,26 +2,28 @@ package account;
 
 import Bank.Calculator;
 
-class Account{
-    private double totalMoney;
+public abstract class Account{
+    private double balance;
     
     Account(){
-        totalMoney = 0.0;        
+        balance = 0.0;        
     }
 
     Account(double initialDeposit){
-        totalMoney = initialDeposit;
+        balance = initialDeposit;
     }
 
     public void depositMoney(double deposit){
-        totalMoney = Calculator.depositMoney(deposit, totalMoney);
+        balance = Calculator.depositMoney(deposit, balance);
     }
 
     public void withdrawMoney(double withdraw){
-        totalMoney = Calculator.withdrawMoney(withdraw, totalMoney);
+        totalMoney = Calculator.withdrawMoney(withdraw, balance);
     }
 
-    public double getTotalMoney(){
-        return totalMoney;
+    public double balance(){
+        return balance;
     }
+
+    public abstract double fees();
 }

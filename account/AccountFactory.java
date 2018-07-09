@@ -12,9 +12,11 @@ public class AccountFactory{
         return af;
     }
 
-    public Account createAccount(double deposit){
-        return new Account(deposit);        
-    }
-
-    
+    public Account createAccount(double deposit, String type){
+        if(type == "Savings"){
+            return new Savings(deposit);        
+        }else{
+            return new Checking(deposit);
+        }
+    }   
 }
