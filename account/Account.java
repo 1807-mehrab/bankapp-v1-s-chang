@@ -13,12 +13,8 @@ public abstract class Account{
         balance = initialDeposit;
     }
 
-    public void depositMoney(double deposit){
-        balance = Calculator.depositMoney(deposit, balance);
-    }
-
-    public void withdrawMoney(double withdraw){
-        totalMoney = Calculator.withdrawMoney(withdraw, balance);
+    public void setBalance(double balance){
+        this.balance = balance;
     }
 
     public double getBalance(){
