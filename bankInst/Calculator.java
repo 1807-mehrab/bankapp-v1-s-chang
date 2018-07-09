@@ -1,4 +1,4 @@
-package Bank;
+package bankInst;
 
 public static class Calculator{
     Calculator(){ }
@@ -17,5 +17,9 @@ public static class Calculator{
 
     public static boolean canWithdraw(double withdraw, double totalMoney){
         return totalMoney > withdraw;
+    }
+
+    public static double savingsFee(double totalMoney){
+        return totalMoney - 5.0;
     }
 }

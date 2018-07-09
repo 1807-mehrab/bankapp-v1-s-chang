@@ -1,5 +1,7 @@
 package account;
 
+import Bank.Calculator;
+
 class Account{
     private double totalMoney;
     
@@ -12,18 +14,14 @@ class Account{
     }
 
     public void depositMoney(double deposit){
-        
+        totalMoney = Calculator.depositMoney(deposit, totalMoney);
     }
 
     public void withdrawMoney(double withdraw){
-        if(totalMoney > withdraw){
-            totalMoney -= withdraw;
-        }else{
-            System.out.println("Insufficient Funds.");            
-        }
+        totalMoney = Calculator.withdrawMoney(withdraw, totalMoney);
     }
 
-    public int getTotalMoney(){
+    public double getTotalMoney(){
         return totalMoney;
     }
 }
