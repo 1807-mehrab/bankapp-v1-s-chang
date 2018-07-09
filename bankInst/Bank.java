@@ -24,6 +24,7 @@ public class Bank{
         personData.put(hash, p);
         accountData.put(hash, a);
         accountTypeData.put(hash, accountType);           
+        System.out.println("Welcome " + p.getName() + " to the Bank.");
     }
 
     public void seeAccountList(){

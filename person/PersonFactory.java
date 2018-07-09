@@ -1,11 +1,11 @@
 package person;
 
 public class PersonFactory{
-    private PersonFactory pf = null;
+    public static PersonFactory pf = null;
     
     private PersonFactory(){ }
 
-    public PersonFactory getPersonFactory(){
+    public static PersonFactory getPersonFactory(){
         if(pf == null){
             pf = new PersonFactory();
         }
